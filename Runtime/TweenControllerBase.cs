@@ -21,7 +21,7 @@ namespace Kogane
         /// <summary>
         /// 準備します
         /// </summary>
-        [Button(enabledMode: EButtonEnableMode.Playmode)]
+        [Button( enabledMode: EButtonEnableMode.Playmode )]
         public void Ready()
         {
             // Tween を再生して即座に一時停止することで
@@ -33,7 +33,7 @@ namespace Kogane
         /// <summary>
         /// 再生します
         /// </summary>
-        [Button(enabledMode: EButtonEnableMode.Playmode)]
+        [Button( enabledMode: EButtonEnableMode.Playmode )]
         public void Play()
         {
             PlayAsync().Forget();
@@ -73,7 +73,7 @@ namespace Kogane
         /// <summary>
         /// 完了します
         /// </summary>
-        [Button(enabledMode: EButtonEnableMode.Playmode)]
+        [Button( enabledMode: EButtonEnableMode.Playmode )]
         public void Complete()
         {
             // Tween が完了した時の状態を反映します
