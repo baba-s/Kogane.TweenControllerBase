@@ -1,4 +1,4 @@
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
@@ -13,7 +13,24 @@ namespace Kogane
         //================================================================================
         // 変数
         //================================================================================
-        private Tween m_tween;
+        private Tween         m_tween;
+        private RectTransform m_rectTransformCache;
+
+        //================================================================================
+        // プロパティ
+        //================================================================================
+        protected RectTransform RectTransform
+        {
+            get
+            {
+                if ( m_rectTransformCache == null )
+                {
+                    m_rectTransformCache = GetComponent<RectTransform>();
+                }
+
+                return m_rectTransformCache;
+            }
+        }
 
         //================================================================================
         // 関数
