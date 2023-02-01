@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
@@ -72,6 +73,8 @@ namespace Kogane
             {
                 m_tween = PlayCore();
             }
+
+            if ( gameObject == null ) throw new OperationCanceledException();
 
             // 演出再生中にシーンを抜けても例外が発生しないように
             // 自分自身を紐付けておきます
